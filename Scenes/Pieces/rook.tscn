@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdjmg0eoqtqv2"]
+
+[ext_resource type="PackedScene" uid="uid://decnhljsl7" path="res://Scenes/Pieces/piece.tscn" id="1_o24el"]
+[ext_resource type="Script" path="res://Scripts/Pieces/rook.gd" id="2_gnxeg"]
+[ext_resource type="Texture2D" uid="uid://xdlqwhfbap8l" path="res://Assets/chess.png" id="3_6ojrq"]
+[ext_resource type="PackedScene" uid="uid://clbiekys3jnvx" path="res://Scenes/chessSquare.tscn" id="3_8le3i"]
+
+[node name="Rook" instance=ExtResource("1_o24el")]
+script = ExtResource("2_gnxeg")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_6ojrq")
+region_enabled = true
+region_rect = Rect2(163, 32, 10, 16)
+
+[node name="Instantiator" parent="." index="1"]
+scene = ExtResource("3_8le3i")

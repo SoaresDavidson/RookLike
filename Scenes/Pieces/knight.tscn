@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi7j02xh12ud"]
+
+[ext_resource type="PackedScene" uid="uid://decnhljsl7" path="res://Scenes/Pieces/piece.tscn" id="1_nnwiw"]
+[ext_resource type="Script" path="res://Scripts/Pieces/knight.gd" id="2_onjha"]
+[ext_resource type="Texture2D" uid="uid://xdlqwhfbap8l" path="res://Assets/chess.png" id="3_glqgl"]
+
+[node name="Knight" instance=ExtResource("1_nnwiw")]
+script = ExtResource("2_onjha")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_glqgl")
+region_enabled = true
+region_rect = Rect2(195, 29, 10, 19)

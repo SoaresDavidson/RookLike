@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://jwo7ukjk2xqk"]
+
+[ext_resource type="Texture2D" uid="uid://xdlqwhfbap8l" path="res://Assets/chess.png" id="1_du24b"]
+[ext_resource type="Script" path="res://Scripts/chessboard.gd" id="1_g8mwc"]
+[ext_resource type="Script" path="res://Scripts/InstantiatesPieces.gd" id="3_wsw6y"]
+[ext_resource type="Script" path="res://Scripts/instantiatorSquares.gd" id="4_4ugam"]
+
+[node name="Chessboard" type="Node2D"]
+script = ExtResource("1_g8mwc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+scale = Vector2(4, 4)
+texture = ExtResource("1_du24b")
+hframes = 2
+
+[node name="InstantiatePieces" type="Node2D" parent="."]
+script = ExtResource("3_wsw6y")
+
+[node name="InstantiatorSquares" type="Node2D" parent="."]
+script = ExtResource("4_4ugam")

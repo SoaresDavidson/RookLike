@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://7dw8h0qlq3a"]
+
+[ext_resource type="PackedScene" uid="uid://decnhljsl7" path="res://Scenes/Pieces/piece.tscn" id="1_74pr3"]
+[ext_resource type="Script" path="res://Scripts/Pieces/king.gd" id="2_lyywl"]
+[ext_resource type="Texture2D" uid="uid://xdlqwhfbap8l" path="res://Assets/chess.png" id="3_xthiv"]
+[ext_resource type="PackedScene" uid="uid://clbiekys3jnvx" path="res://Scenes/chessSquare.tscn" id="4_qgk7g"]
+
+[node name="King" instance=ExtResource("1_74pr3")]
+script = ExtResource("2_lyywl")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_xthiv")
+region_enabled = true
+region_rect = Rect2(259, 25, 10, 23)
+
+[node name="Instantiator" parent="." index="1"]
+scene = ExtResource("4_qgk7g")
